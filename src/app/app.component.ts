@@ -12,8 +12,25 @@ export class AppComponent {
   defaultQuestion = 'teacher';
   answer = '';
   genders = ['male', 'female'];
+
   suggestUserName() {
     const suggestedName = 'Superuser';
+    // This is not the best approach as the whole form values are 
+    // populated with blanks and username is selecedd as SuperUser
+    // this.signupForm.setValue({
+    //   userData: {
+    //     username: suggestedName,
+    //     email: ''
+    //   },
+    //   secret: 'pet',
+    //   questionAnswer: '',
+    //   gender: 'male'
+    // });
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
   }
 
   // onSubmit(form: NgForm) {
