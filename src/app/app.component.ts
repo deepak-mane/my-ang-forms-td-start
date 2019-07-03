@@ -18,7 +18,7 @@ export class AppComponent {
     secretQuestion: '',
     answer: '',
     gender: ''
-  }
+  };
   submitted = false;
 
   suggestUserName() {
@@ -50,9 +50,9 @@ export class AppComponent {
     this.submitted = true;
     this.user.username = this.signupForm.value.userData.username;
     this.user.email = this.signupForm.value.userData.email;
-    this.user.secretQuestion = this.signupForm.value.userData.secret;
-    this.user.answer = this.signupForm.value.userData.questionAnswer;
-    this.user.gender = this.signupForm.value.userData.gender;
+    this.user.secretQuestion = this.signupForm.value.secret;
+    this.user.answer = this.signupForm.value.questionAnswer;
+    this.user.gender = this.signupForm.value.gender;
   }
 }
 
